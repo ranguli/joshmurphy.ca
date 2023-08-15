@@ -1,9 +1,55 @@
 ---
+const url = new URL(Astro.request.url);
 ---
 
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-  <a href="/tags/">Tags</a>
-</div>
+<body class="nav-links bg-background h-full text-[18px] flex">
+  <div class="contain h-full w-full">
+    <div class="backdrop -z-20">
+      <css-doodle use="var(--rule)"></css-doodle>
+    </div>
+    <div class="sidebar bg-background opacity-50 -z-10"></div>
+    <div class="sidebar py-4 lg:pt-8 flex justify-start lg:justify-end">
+      <nav class="flex flex-col mt-4 lg:my-0 mx-8 lg:mx-auto">
+        <h1 class="font-bold">jack harrhy</h1>
+        <p>
+          <a href="/">about</a>{url.pathname === "/" && "←"}
+        </p>
+        <p>
+          <a href="/posts/">posts</a>{url.pathname.startsWith("/posts") && "←"}
+        </p>
+        <p>
+          <a href="/projects/">projects</a>{
+            url.pathname.startsWith("/projects") && "←"
+          }
+        </p>
+        <div class="flex flex-col text-sm mt-4">
+          <a href="https://github.com/jackharrhy/">
+            <i class="fab fa-github w-3.5"></i> github
+          </a>
+          <a href="https://twitter.com/jackharrhyisme">
+            <i class="fab fa-twitter w-3.5"></i> twitter
+          </a>
+          <a href="https://nfld.social/@jack">
+            <i class="fab fa-mastodon w-3.5"></i> mastodon
+          </a>
+          <a href="https://www.threads.net/@jackarthurharrhy">
+            <i class="fas fa-at w-3.5"></i> threads
+          </a>
+          <a href="https://www.instagram.com/jackarthurharrhy/">
+            <i class="fab fa-instagram w-3.5"></i> instagram
+          </a>
+          <a href="https://steamcommunity.com/id/fudgeisgood/">
+            <i class="fab fa-steam w-3.5"></i> steam
+          </a>
+          <a href="https://www.youtube.com/c/TheEdiblePencil">
+            <i class="fab fa-youtube w-3.5"></i> youtube
+          </a>
+        </div>
+      </nav>
+    </div>
+    <hr class="my-8 border border-slate-400 lg:hidden" />
+    <main class="px-8 py-4 lg:pt-8 bg-background">
+      <slot />
+    </main>
+  </div></body
+>

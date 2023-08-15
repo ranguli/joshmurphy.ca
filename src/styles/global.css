@@ -1,6 +1,14 @@
-html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  background-color: #dae0f2;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: lowercase;
 }
 
 body {
@@ -22,19 +30,6 @@ h1 {
 
 /* nav styles */
 
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
-}
-
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -51,12 +46,11 @@ h1 {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
-.nav-links a:hover,
+a:hover,
 a:focus {
-  background-color: #ff9776;
+  text-decoration: underline;
 }
 
 .expanded {

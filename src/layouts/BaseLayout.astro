@@ -1,25 +1,30 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+
+const { title } = Astro.props;
+const url = new URL(Astro.request.url);
 ---
 
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>{title} - jackharrhy</title>
   </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+  <body class="bg-background h-full text-[18px] flex">
+    <Navigation />
+    <hr class="my-8 border border-slate-400 lg:hidden" />
+    <main class="px-8 py-4 lg:pt-8 bg-background">
+      <slot />
+    </main>
   </body>
 </html>
