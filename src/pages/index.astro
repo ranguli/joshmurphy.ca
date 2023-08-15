@@ -1,9 +1,40 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
-const pageTitle = "Home Page";
+import Floppy from "../components/Floppy.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+
+<BaseLayout pageTitle="about">
+  <div class="mb-4">
+    <Floppy />
+  </div>
+  <ul>
+    <h1>hi, i'm josh</h1>
+    <li class="pt-3">
+      currently i'm working at <a href="https://www.c-core.ca/">C-CORE</a>,
+      working on super neat web-based geospatial sofware
+    </li>
+    <li class="pt-3">
+      previously i've worked for
+      <a href="https://bluedropism.com/">Bluedrop</a>, and <a
+        href="https://www.colabsoftware.com/">CoLab Software</a
+      >, as a full stack developer
+    </li>
+    <li class="pt-3">
+      instructor at <a href="https://www.get-coding.ca/">Get Coding</a>
+    </li>
+    <li class="text-sm pt-3">
+      <span class="italic opacity-50">(planning on)</span> finishing up my undergrad
+      at <a href="https://www.mun.ca/">MUN</a>
+      <span class="italic opacity-50">(eventually)</span>
+    </li>
+    <li class="text-sm pt-3">
+      active with <a href="https://ctsnl.ca/">CTSNL</a>, and sometimes
+      <a href="https://www.meetup.com/NDevMeetup/">NDev</a>
+    </li>
+    <li class="text-sm pt-3">
+      building things with pals in
+      <a href="https://github.com/fogo-sh">fogo.sh</a>
+    </li>
+    <li class="text-sm pt-3">from wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿, vibing in canada 🇨🇦</li>
+  </ul>
 </BaseLayout>

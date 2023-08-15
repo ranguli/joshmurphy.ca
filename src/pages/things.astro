@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ThingContainer from "../components/ThingContainer.astro";
+import Thing from "../components/Thing.astro";
+---
+
+<BaseLayout title="things">
+  <h1 class="font-semibold">things</h1>
+  <h2 class="text-md mt-4 mb-1">my things</h2>
+  <ThingContainer>
+    <Thing
+      title="smoldoom"
+      link="https://github.com/smoldoom"
+      description="a minimal, educational source port from my DOOM engine explorations"
+    />
+    <Thing
+      title="smoldoom"
+      link="https://github.com/smoldoom"
+      description="a minimal, educational source port from my DOOM engine explorations"
+    />
+    <Thing
+      title="smoldoom"
+      link="https://github.com/smoldoom"
+      description="a minimal, educational source port from my DOOM engine explorations"
+    />
+  </ThingContainer>
+  <h2 class="text-md mt-4 mb-1">other peoples things i've contributed to</h2>
+  :(
+  <h2 class="text-md mt-4 mb-1">other peoples things i just really like</h2>
+  <ThingContainer>
+    <Thing
+      title="OpenBSD"
+      link="https://www.openbsd.org/"
+      description="the best bsd, made in 🇨🇦"
+    />
+    <Thing
+      title="Pinephone"
+      link="https://wiki.pine64.org/wiki/PinePhone"
+      description="i freaking love these little guys"
+    />
+    <Thing
+      title="Minetest"
+      link="https://minetest.net/"
+      description="cool libre game engine with lua scripting"
+    />
+  </ThingContainer>
+</BaseLayout>

@@ -1,25 +1,67 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+
+const { title } = Astro.props;
+const url = new URL(Astro.request.url);
 ---
 
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>{title} - josh murphy</title>
   </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
+
+  <body class="nav-links bg-background h-full text-[18px] flex">
+    <div class="contain h-full w-full">
+      <div class="backdrop -z-20">
+        <css-doodle use="var(--rule)"></css-doodle>
+      </div>
+      <div class="sidebar bg-background opacity-50 -z-10"></div>
+      <div class="sidebar py-4 lg:pt-8 flex justify-start lg:justify-end">
+        <nav class="flex flex-col mt-4 lg:my-0 mx-8 lg:mx-auto">
+          <h1 class="font-bold">josh murphy</h1>
+          <p>
+            <a href="/">about</a>{url.pathname === "/" && "←"}
+          </p>
+          <p>
+            <a href="/posts/">posts</a>{
+              url.pathname.startsWith("/posts") && "←"
+            }
+          </p>
+          <p>
+            <a href="/things/">things</a>{
+              url.pathname.startsWith("/things") && "←"
+            }
+          </p>
+          <p>
+            <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
+          </p>
+          <div class="flex flex-col text-sm mt-4">
+            <a href="https://github.com/ranguli/">
+              <i class="fab fa-github w-3.5"></i> github
+            </a>
+            <a href="#">
+              <i class="fab fa-mastodon w-3.5"></i> mastodon
+            </a>
+            <a href="mailto:hello@joshmurphy.ca">
+              <i class="fas fa-at w-3.5"></i> email
+            </a>
+          </div>
+        </nav>
+      </div>
+      <hr class="my-8 border border-slate-400 lg:hidden" />
+      <main class="px-8 py-4 lg:pt-8 bg-background">
+        <slot />
+      </main>
+    </div></body
+  >
 </html>
