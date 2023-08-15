@@ -4,9 +4,10 @@ import BlogPost from "../../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-
   const allPosts = await getCollection("posts");
-  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
 
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) =>
@@ -22,12 +23,19 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
+
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
+  <p>Posts tagged with {tag}:</p>
+  <br />
   <ul>
     {
       posts.map((post) => (
-        <BlogPost url={"/posts/" + post.slug} title={post.data.title} />
+        <BlogPost
+          url={"/posts/" + post.slug}
+          title={post.data.title}
+          date={post.data.pubDate.toString().slice(0, 15)}
+          tags={post.data.tags}
+        />
       ))
     }
   </ul>

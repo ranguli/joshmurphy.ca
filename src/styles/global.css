@@ -4,83 +4,108 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
-  background-color: #dae0f2;
   font-family: "JetBrains Mono", monospace;
-  text-transform: lowercase;
 }
 
-body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
+html {
+  background-color: #e4ebff;
 }
 
-* {
-  box-sizing: border-box;
+a:link,
+a:visited {
+  color: #416bce
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+.contain {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 10em 40em 10em 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
 }
 
-/* nav styles */
-
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
+.backdrop {
+  grid-area: 1 / 1 / 2 / 6;
 }
 
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+.sidebar {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
-a:hover,
-a:focus {
-  text-decoration: underline;
+main {
+  grid-area: 1 / 3 / 2 / 4;
 }
 
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: none;
+@media (max-width: 1024px) {
+  .contain {
+    @apply flex flex-col;
   }
 }
 
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
+.markdown>h1 {
+  font-size: 2em !important;
 }
 
-.dark .nav-links a {
-  color: #fff;
+.markdown>h2 {
+  font-size: 1.75em !important;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.markdown>blockquote {
+  font-style: italic;
+}
+
+.markdown>blockquote,
+.markdown>ul,
+.markdown>*>ul,
+.markdown>ol,
+.markdown>*>ol {
+  margin-left: 2em;
+}
+
+.markdown>ul,
+.markdown>*ul,
+.markdown>ol,
+.markdown>*>ol {
+  padding: 0.5em;
+}
+
+.markdown>ul,
+.markdown>*>ul {
+  list-style: square !important;
+}
+
+.markdown>*>ol {
+  list-style: decimal !important;
+}
+
+pre.astro-code.github-dark,
+.markdown>blockquote {
+  padding: 0.5em;
+  margin-bottom: 1.5em !important;
+  margin-top: 1.5em !important;
+}
+
+
+.markdown>p>code,
+.markdown>*>li>code,
+.markdown>blockquote {
+  background-color: #CED3D9 !important;
+}
+
+.markdown>h3 {
+  font-size: 1.25em !important;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.frontmatter {
+  font-size: 0.85em;
+}
+
+.tag {
+  border: none !important;
+  background-color: inherit !important;
 }
