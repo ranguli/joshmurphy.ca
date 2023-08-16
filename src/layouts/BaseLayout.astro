@@ -37,11 +37,13 @@ const url = new URL(Astro.request.url);
               url.pathname.startsWith("/posts") && "←"
             }
           </p>
+          <!--
           <p>
             <a href="/things/">things</a>{
               url.pathname.startsWith("/things") && "←"
             }
           </p>
+          -->
           <p>
             <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
           </p>
