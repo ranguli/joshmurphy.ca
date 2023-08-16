@@ -1,6 +1,6 @@
 ---
 title: 'The Gemini protocol: what can it (not) do?'
-pubDate: 2022-08-16
+pubDate: 2023-08-16
 description: "Beginning adventure into gemini:// space"
 author: "Joshua Murphy"
 tags: ["gemini"]
