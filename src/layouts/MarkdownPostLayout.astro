@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <p class="frontmatter">{frontmatter.author}</p>
   <p class="frontmatter">{frontmatter.description}</p>
   <br />
-  <div class="prose w-full prose-blockquote:border-black prose-sm">
+  <div class="prose w-full prose-blockquote:border-black">
     <slot />
   </div>
 </BaseLayout>

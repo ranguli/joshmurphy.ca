@@ -37,11 +37,13 @@ const url = new URL(Astro.request.url);
               url.pathname.startsWith("/posts") && "←"
             }
           </p>
+          <!--
           <p>
             <a href="/things/">things</a>{
               url.pathname.startsWith("/things") && "←"
             }
           </p>
+          -->
           <p>
             <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
           </p>
@@ -55,12 +57,6 @@ const url = new URL(Astro.request.url);
             <a href="mailto:hello@joshmurphy.ca">
               <i class="fas fa-at w-3.5"></i> email
             </a>
-            <a href="https://tamanotchi.world/5808c" class="absolute bottom-0"
-              ><img
-                src="https://tamanotchi.world/i2/5808"
-                alt="It's tamaNOTchi! Click to feed!"
-              /></a
-            >
           </div>
         </nav>
       </div>
