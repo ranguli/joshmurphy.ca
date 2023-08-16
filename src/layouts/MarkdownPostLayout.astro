@@ -4,12 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="markdown">
-    <h1>{frontmatter.title}</h1>
-    <p class="frontmatter">{frontmatter.pubDate.toString().slice(0, 15)}</p>
-    <p class="frontmatter">{frontmatter.author}</p>
-    <p class="frontmatter">{frontmatter.description}</p>
-    <br />
+  <h1>{frontmatter.title}</h1>
+  <p class="frontmatter">{frontmatter.pubDate.toString().slice(0, 15)}</p>
+  <p class="frontmatter">{frontmatter.author}</p>
+  <p class="frontmatter">{frontmatter.description}</p>
+  <br />
+  <div class="prose w-full prose-blockquote:border-black prose-sm">
     <slot />
   </div>
 </BaseLayout>

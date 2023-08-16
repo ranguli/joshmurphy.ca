@@ -43,64 +43,6 @@ main {
   }
 }
 
-.markdown>h1 {
-  font-size: 2em !important;
-}
-
-.markdown>h2 {
-  font-size: 1.75em !important;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.markdown>blockquote {
-  font-style: italic;
-}
-
-.markdown>blockquote,
-.markdown>ul,
-.markdown>*>ul,
-.markdown>ol,
-.markdown>*>ol {
-  margin-left: 2em;
-}
-
-.markdown>ul,
-.markdown>*>ul,
-.markdown>ol,
-.markdown>*>ol {
-  padding: 0.5em;
-}
-
-.markdown>ul,
-.markdown>*>ul {
-  list-style: square !important;
-}
-
-.markdown>*>ol {
-  list-style: decimal !important;
-}
-
-pre.astro-code.github-dark,
-.markdown>blockquote {
-  padding: 0.5em;
-  margin-bottom: 1.5em !important;
-  margin-top: 1.5em !important;
-}
-
-
-.markdown>p>code,
-.markdown>*>li>code,
-.markdown>blockquote {
-  background-color: #CED3D9 !important;
-}
-
-.markdown>h3 {
-  font-size: 1.25em !important;
-  padding-bottom: 1em;
-  padding-top: 1em;
-}
-
 .frontmatter {
   font-size: 0.85em;
 }

@@ -20,7 +20,7 @@ __This sentence is in italics.__
 
 This sentence has a `code()` thing. 
 
-This sentence has a [link](https:///example.com).
+This sentence has a [link to Lists](#lists).
 
 ## Table
 
