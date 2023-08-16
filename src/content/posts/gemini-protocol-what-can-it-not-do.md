@@ -38,10 +38,10 @@ Let's put some of this into practice as an example in the next section.
 
 Really some of my confusion came down to the difference between what a Gemini client is expected to be able to render and display versus what it can actually receive (and just save as a file). 
 
-**That's to say you can download images from a server over Gemini. But you can't _see_ them in your browser, because the specification is all about rendering text only. You'll need to open the downloaded image in another application (or use a client that breaks the spec)** 
+**That's to say you can download images from a server over Gemini. But you can't _see_ them in your browser, because the specification is all about rendering text only. You'll need to open the downloaded image in another application (or use a client that breaks the spec).** 
 
 
-Clients cant upload images, nor do servers support receiving them.
+Clients can't upload images, nor do servers support receiving them.
 
 ## You _can_ get user input though
 
