@@ -1,21 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-  font-family: "JetBrains Mono", monospace;
-}
-
-html {
-  background-color: #e4ebff;
-}
-
-a:link,
-a:visited {
-  color: #416bce
-}
 
 .contain {
   display: grid;
@@ -31,6 +16,14 @@ a:visited {
 
 .sidebar {
   grid-area: 1 / 2 / 2 / 3;
+}
+
+a {
+  @apply text-link;
+}
+
+a:hover {
+  @apply underline;
 }
 
 main {

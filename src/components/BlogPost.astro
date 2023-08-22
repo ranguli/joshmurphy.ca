@@ -5,10 +5,7 @@ const { title, url, date, tags } = Astro.props;
 <li>
   <a href={url}>{title}</a>
   <br />
-  <i>{date}</i>
-  <p>
-    {tags.toString()}
-  </p>
+  <p class="text-sm">{date}</p>
 
   <br />
   <br />
