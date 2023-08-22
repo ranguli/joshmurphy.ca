@@ -56,6 +56,6 @@ The thing Linux mobile has got going for us is that for the first time, the noti
 
 If apps like Twitter, Facebook, etc start dying, and more and more people find peace being off of social media _as a whole_, then that's a whole host of killer apps off the table. A whole lot fewer people are going to think about a Linux phone and ask "Can I check Instagram on it? Can I use iMessage?". The less people that use Instagram, the less people are going to care if their phone can't use Instagram. And if the European Union pushes iMessage to be some kind of cross-platform standard, then good lord half the reason to own an iPhone goes right out the window anyways.
 
-I'm not saying everyone is going to be running around with Linux phones in their pockets in the future - not a chance. But, if factors both internal and external to the mobile Linux platform trend well, there's a chance for some of us out there who are on the fence, saying _"Maybe I could maybe see ourselves daily-driving a Linux phone when x y and z_".
+I'm not saying everyone is going to be running around with Linux phones in their pockets in the future - not a chance. But, if factors both internal and external to the mobile Linux platform trend well, there's a chance for some of us out there who are on the fence, saying _"Maybe I could maybe see myself daily-driving a Linux phone when x y and z_".
 
 I'll certainly be here waiting for x y and z to happen.
