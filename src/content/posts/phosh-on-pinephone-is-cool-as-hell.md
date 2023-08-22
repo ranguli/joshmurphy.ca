@@ -45,7 +45,7 @@ Here's my prediction on where I think this could all be heading:
 
 > When the time comes that mobile distros choose to officially support (and encourage) Flatpak, an entire app store ecosystem with a full catalog of good-looking responsive apps will be bestowed onto mobile Linux users, almost overnight. Once Flatpaks are wholly embraced on postmarketOS, Manjaro ARM, etc, and there's a nice GUI frontend for Flathub installed by default, the proverbial floodgate will open and there will be a flurry of activity and interest.
 
-And the great thing about that flurry of activity is that it's a symbiotic relationship with Linux on the desktop. People writing responsive apps are great, people distributing their app as a Flatpak are great. That benefits the desktop community, and it (will) benefit the mobile community in a trickle-down effect. But the trickling can go both ways too - mobile users may identify bugs and UI issues not identified on the Desktop, and that will make the apps better for everyone.
+And the great thing about that flurry of activity is that it's a symbiotic relationship with Linux on the desktop. Developers writing responsive apps distributed via Flatpak are a boon for Linux as a desktop platform. That gift will automatically get handed down to mobile users. As a bonus, those developers will be rewarded by that one mobile user who identifies a bug. They'll gain a few more (grateful) users. Maybe some pull requests. It's like a trickle-down effect, but the trickling is bi-directional and not a dubious economic policy. And if these apps are well-written and responsive, the overhead for supporting mobile is significantly less depending on the application.  
 
 
 ### Closing thoughts
