@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
   <p class="frontmatter">{frontmatter.pubDate.toString().slice(0, 15)}</p>
   <p class="frontmatter">{frontmatter.description}</p>
   <br />
-  <div class="prose prose-joshmurphyca prose-code:font-mono w-full">
+  <div class="prose prose-joshmurphyca prose-code:font-mono max-w-none w-full">
     <slot />
   </div>
 </BaseLayout>
