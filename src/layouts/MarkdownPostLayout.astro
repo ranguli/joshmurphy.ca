@@ -4,16 +4,14 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <div class="py-8 ">
-    <h1 class="title">{frontmatter.title}</h1>
-
-    <h2 class="description">{frontmatter.description}</h2>
-  
-    <p class="published">Published on {frontmatter.pubDate.toString().slice(4, 15)}</p>
-    <p class="author">{frontmatter.author}</p>
-
-  </div>
-  <div class="prose font-serif">
+  <div class="prose m-2 font-serif">
+    <div class="py-8 ">
+      {frontmatter.coverImage && <img src={frontmatter.coverImage} alt={frontmatter.title} class="cover-image"/>}
+      <h1 class="title">{frontmatter.title}</h1>
+      <h2 class="description">{frontmatter.description}</h2>
+      <p class="published">Published on {frontmatter.pubDate.toString().slice(4, 15)}</p>
+      <p class="author">{frontmatter.author}</p>
+    </div>
     <slot />
   </div>
 </BaseLayout>

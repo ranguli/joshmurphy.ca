@@ -1,8 +1,9 @@
 ---
-title: 'Linux convergence is alive and well (and phosh on the PinePhone is cool as hell)'
+title: 'Linux convergence is alive, and cool as hell.'
 pubDate: 2023-08-21
 description: ""
 author: "Joshua Murphy"
+coverImage: "/images/projects/pinephone.webp"
 tags: ["gnome", "flatpak", "pinephone", "phosh", "linux", "convergence"]
 ---
 
