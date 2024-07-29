@@ -40,83 +40,39 @@ const url = new URL(Astro.request.url);
           <div class="flex space-x-4">
             <!-- Logo -->
             <div>
-              <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+              <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
                 <span class="font-bold">joshmurphy.ca</span>
               </a>
             </div>
             <!-- Primary Navbar items -->
             <div class="hidden md:flex items-center space-x-1">
-              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
-              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
-              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+              <a href="/posts/" class="py-5 px-3 text-gray-700 hover:text-gray-900">posts</a>
+              
+              <!--<a href="/things/" class="py-5 px-3 text-gray-700 hover:text-gray-900">projects</a>-->
+                  
+            
+              <a href="/tags/" class="py-5 px-3 text-gray-700 hover:text-gray-900">tags</a>
             </div>
           </div>
           <!-- Secondary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href="#" class="py-2 px-3 text-black">Login</a>
+            <a href="mailto:hello@joshmurphy.ca">
+              <i class="px-5 fas fa-at h-full text-xl w-3.5"></i>
+            </a>
+            <a href="https://github.com/ranguli/">
+              <i class="px-5 fab fa-github text-xl w-3.5"></i>
+            </a>
           </div>
         </div>
       </div>
       <!-- Mobile Menu -->
       <div class="menu md:hidden">
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Login</a>
+        <a href="/posts/" class="block py-2 px-4 hover:bg-gray-200">posts</a>
+        
+        <!--<a href="/things/" class="block py-2 px-4 hover:bg-gray-200">projects</a>-->
+        <a href="/tags/" class="block py-2 px-4 hover:bg-gray-200">tags</a>
       </div>
     </nav>
-
-    <!--    <div
-      class="sidebar container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
-    >
-      <nav>
-        <div class="basis-8">
-          <h1 class="font-bold">josh murphy</h1>
-        </div>
-
-        <div class="px-8 basis-4">
-          <p>
-            <a href="/">about</a>{url.pathname === "/" && "←"}
-          </p>
-        </div>
-        <div class="px-8 basis-4">
-          <p>
-            <a href="/posts/">posts</a>{
-              url.pathname.startsWith("/posts") && "←"
-            }
-          </p>
-        </div>
-        
-            <p>
-              <a href="/things/">things</a>{
-                url.pathname.startsWith("/things") && "←"
-              }
-            </p>
-            
-        <div class="px-8 basis-4">
-          <p>
-            <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
-          </p>
-        </div>
-        <div class="px-8 basis-4">
-          <a href="https://github.com/ranguli/">
-            <i class="fab fa-github w-3.5"></i>
-          </a>
-        </div>
-        <div class="px-8 basis-4">
-          <a href="#">
-            <i class="fab fa-mastodon w-3.5"></i>
-          </a>
-        </div>
-        <div class="px-8 basis-4">
-          <a href="mailto:hello@joshmurphy.ca">
-            <i class="fas fa-at w-3.5"></i>
-          </a>
-        </div>
-      </nav>
-    </div>
-  -->
-
     <main>
       <div class="container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
         <slot />
