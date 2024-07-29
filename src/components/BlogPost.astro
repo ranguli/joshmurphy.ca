@@ -1,14 +1,14 @@
 ---
-const { title, url, date, tags } = Astro.props;
+const { title, url, date, description, author, tags } = Astro.props;
 ---
 
 <li>
-  <a href={url}>{title}</a>
+  <a href={url} class="title">{title}</a>
   <br />
-  <i>{date}</i>
-  <p>
-    {tags.toString()}
-  </p>
+
+  <p class="description">{description}</p>
+  <p class="author">{date}</p>
+  <p class="author">{author}</p>
 
   <br />
   <br />

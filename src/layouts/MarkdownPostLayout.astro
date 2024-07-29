@@ -4,12 +4,16 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
-  <p class="frontmatter">{frontmatter.pubDate.toString().slice(0, 15)}</p>
-  <p class="frontmatter">{frontmatter.author}</p>
-  <p class="frontmatter">{frontmatter.description}</p>
-  <br />
-  <div class="prose w-full prose-blockquote:border-black">
+  <div class="py-8 ">
+    <h1 class="title">{frontmatter.title}</h1>
+
+    <h2 class="description">{frontmatter.description}</h2>
+  
+    <p class="published">Published on {frontmatter.pubDate.toString().slice(4, 15)}</p>
+    <p class="author">{frontmatter.author}</p>
+
+  </div>
+  <div class="prose font-serif">
     <slot />
   </div>
 </BaseLayout>

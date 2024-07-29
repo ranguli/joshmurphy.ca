@@ -13,6 +13,8 @@ const allPosts = await getCollection("posts");
         <BlogPost
           url={"/posts/" + post.slug}
           title={post.data.title}
+          author={post.data.author}
+          description={post.data.description}
           date={post.data.pubDate.toString().slice(0, 15)}
           tags={post.data.tags}
         />
