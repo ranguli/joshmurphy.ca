@@ -26,46 +26,61 @@ const url = new URL(Astro.request.url);
     <title>{title} - joshmurphy.ca</title>
   </head>
 
-  <body class="h-full flex">
-    <div class="contain h-full w-full">
-      <div class="sidebar"></div>
-      <div class="sidebar py-4 lg:pt-8 flex justify-start lg:justify-end">
-        <nav class="flex flex-col mt-4 lg:my-0 mx-8 lg:mx-auto">
+  <body class="flex flex-col">
+    <div
+      class="sidebar container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+    >
+      <nav>
+        <div class="basis-8">
           <h1 class="font-bold">josh murphy</h1>
+        </div>
+
+        <div class="px-8 basis-4">
           <p>
             <a href="/">about</a>{url.pathname === "/" && "←"}
           </p>
+        </div>
+        <div class="px-8 basis-4">
           <p>
             <a href="/posts/">posts</a>{
               url.pathname.startsWith("/posts") && "←"
             }
           </p>
-          <!--
-          <p>
-            <a href="/things/">things</a>{
-              url.pathname.startsWith("/things") && "←"
-            }
-          </p>
-          -->
+        </div>
+        <!--
+            <p>
+              <a href="/things/">things</a>{
+                url.pathname.startsWith("/things") && "←"
+              }
+            </p>
+            -->
+        <div class="px-8 basis-4">
           <p>
             <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
           </p>
-          <div class="flex flex-col text-sm mt-4">
-            <a href="https://github.com/ranguli/">
-              <i class="fab fa-github w-3.5"></i> github
-            </a>
-            <a href="#">
-              <i class="fab fa-mastodon w-3.5"></i> mastodon
-            </a>
-            <a href="mailto:hello@joshmurphy.ca">
-              <i class="fas fa-at w-3.5"></i> email
-            </a>
-          </div>
-        </nav>
-      </div>
-      <main>
-        <slot />
-      </main>
+        </div>
+        <div class="px-8 basis-4">
+          <a href="https://github.com/ranguli/">
+            <i class="fab fa-github w-3.5"></i>
+          </a>
+        </div>
+        <div class="px-8 basis-4">
+          <a href="#">
+            <i class="fab fa-mastodon w-3.5"></i>
+          </a>
+        </div>
+        <div class="px-8 basis-4">
+          <a href="mailto:hello@joshmurphy.ca">
+            <i class="fas fa-at w-3.5"></i>
+          </a>
+        </div>
+      </nav>
     </div>
+
+    <main>
+      <div class="container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
+        <slot />
+      </div>
+    </main>
   </body>
 </html>

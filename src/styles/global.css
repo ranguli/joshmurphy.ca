@@ -17,13 +17,7 @@
 }
 
 
-.contain {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 10em 40em 10em 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-}
+
 
 a {
   color: var(--color-gray-600);
@@ -32,13 +26,6 @@ a {
 
 a:visited {
   color: var(--color-gray-600);
-}
-
-
-
-
-.backdrop {
-  grid-area: 1 / 1 / 2 / 6;
 }
 
 .sidebar {
