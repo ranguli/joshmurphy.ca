@@ -24,10 +24,49 @@ const url = new URL(Astro.request.url);
       href="/rss.xml"
     />
     <title>{title} - joshmurphy.ca</title>
+
+    <style>
+      /* Checkbox Hack */
+      input[type=checkbox]:checked ~ .menu {
+        display: block;
+      }
+    </style>
   </head>
 
   <body class="flex flex-col">
-    <div
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-4">
+            <!-- Logo -->
+            <div>
+              <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                <span class="font-bold">joshmurphy.ca</span>
+              </a>
+            </div>
+            <!-- Primary Navbar items -->
+            <div class="hidden md:flex items-center space-x-1">
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+            </div>
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#" class="py-2 px-3 text-black">Login</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="menu md:hidden">
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Login</a>
+      </div>
+    </nav>
+
+    <!--    <div
       class="sidebar container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
     >
       <nav>
@@ -47,13 +86,13 @@ const url = new URL(Astro.request.url);
             }
           </p>
         </div>
-        <!--
+        
             <p>
               <a href="/things/">things</a>{
                 url.pathname.startsWith("/things") && "←"
               }
             </p>
-            -->
+            
         <div class="px-8 basis-4">
           <p>
             <a href="/tags/">tags</a>{url.pathname.startsWith("/tags") && "←"}
@@ -76,6 +115,7 @@ const url = new URL(Astro.request.url);
         </div>
       </nav>
     </div>
+  -->
 
     <main>
       <div class="container mx-auto p-4 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">

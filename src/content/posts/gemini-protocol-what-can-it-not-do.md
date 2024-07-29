@@ -3,6 +3,7 @@ title: 'The Gemini protocol: what can it (not) do?'
 description: "Beginning adventure into gemini:// space"
 pubDate: 2023-08-16
 updatedDate: 2024-07-29
+coverImage: "/images/gemini.webp"
 author: "Joshua Murphy"
 tags: ["gemini"]
 ---
