@@ -8,17 +8,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="mb-4">
       <Floppy />
     </div>
-    <ul>
-      <h1>hi, i'm josh and i am on the computer</h1>
-      <li class="pt-3">
-        i'm mainly interested in open source software, cybersecurity, a touch of
-        game dev, retrocomputing, and amateur radio.
-        <li class="pt-3">
-          this site serves as a place for me to document my explorations into
+    <div class="prose m-2 font-serif">
+      <div class="py-8 ">
+        <p>Hi, I'm Josh and I am on the computer.</p>
+        <p>I'm mainly interested in open source software, cybersecurity, a touch of
+          game dev, retrocomputing, and amateur radio.</p>
+        <p>This site serves as a place for me to document my explorations into
           those fields. check out the <a href="/posts">posts</a> page to follow those
-          adventures.
-        </li>
-        <li class="text-sm pt-3">made in canada 🇨🇦</li>
-      </li>
-    </ul>
+          adventures.</p>
+        <p class="text-sm">made in canada 🇨🇦</p>
+      </div>
+      <slot />
+    </div>
 </BaseLayout>

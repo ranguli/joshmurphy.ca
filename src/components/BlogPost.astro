@@ -1,33 +1,17 @@
-
-<!--
-
-
-<li>
-  <a href={url} class="title">{title}</a>
-  <br />
-
-  <p class="description">{description}</p>
-  <p class="author">{date}</p>
-  <p class="author">{author}</p>
-
-  <br />
-  <br />
-</li>
--->
 ---
-const { url, title, author, description, date, coverImage } = Astro.props;
+const { url, title, author, description, date, draft, coverImage } = Astro.props;
 ---
 
 <li class="mb-4">
   
   <a href={url} class="block">
     {coverImage && (
-      <img class="w-full h-64 object-cover mb-2 rounded" src={coverImage} alt={title}/>
+      <img class="cover-image" src={coverImage} alt={title}/>
     )}
-    <h2 class="title">{title}</h2>
+    <h1 class="title">{title}</h1>
   </a>
 
-  <p class="description">{description}</p>
-  <p class="author">Published on {date}</p>
-  <p class="author">by {author}</p>
+  <h2 class="description">{description}</h2>
+  <h3 class="published">Published on {date}</h3>
+  <h3 class="author">by {author}</h3>
 </li>

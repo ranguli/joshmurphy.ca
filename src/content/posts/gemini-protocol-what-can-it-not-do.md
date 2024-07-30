@@ -25,7 +25,7 @@ In other words, Gemini is an Internet protocol that makes _interconnected text d
 I read this and incorrectly interpreted it as "Gemini can only send and receive text files", which is not the case. Text files are just _the main thing_. This distinction is important enough that I'm writing this with the hope that it will give clarity to other people learning about Gemini. 
 
 
-## Q: So Gemini can send and receive any kind of file?
+### Q: So Gemini can send and receive any kind of file?
 
 Here's how I understand it:
 
