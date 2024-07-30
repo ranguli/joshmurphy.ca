@@ -24,53 +24,27 @@ const url = new URL(Astro.request.url);
       href="/rss.xml"
     />
     <title>{title} - joshmurphy.ca</title>
-
-    <style>
-      /* Checkbox Hack */
-      input[type=checkbox]:checked ~ .menu {
-        display: block;
-      }
-    </style>
   </head>
-
   <body class="flex flex-col">
     <nav class="bg-white shadow-lg">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between">
-          <div class="flex space-x-4">
-            <!-- Logo -->
-            <div>
-              <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-                <span class="font-bold">joshmurphy.ca</span>
-              </a>
-            </div>
-            <!-- Primary Navbar items -->
-            <div class="hidden md:flex items-center space-x-1">
-              <a href="/posts/" class="py-5 px-3 text-gray-700 hover:text-gray-900">posts</a>
-              
-              <!--<a href="/things/" class="py-5 px-3 text-gray-700 hover:text-gray-900">projects</a>-->
-                  
-            
-              <a href="/tags/" class="py-5 px-3 text-gray-700 hover:text-gray-900">tags</a>
-            </div>
+      <div class="max-w-6xl my-4 mx-auto px-2">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+          <!-- Primary Menu Items -->
+          <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
+            <a href="/" class="lg-nav-item font-bold">joshmurphy.ca</a>
+            <a href="/posts/" class="lg-nav-item">posts</a>
+            <a href="/tags/" class="lg-nav-item">tags</a>
           </div>
-          <!-- Secondary Navbar items -->
-          <div class="hidden md:flex items-center space-x-1">
-            <a href="mailto:hello@joshmurphy.ca">
-              <i class="px-5 fas fa-at h-full text-xl w-3.5"></i>
+          <!-- Secondary Navbar Items -->
+          <div class="flex flex-col md:flex-row md:items-center md:space-x-4 mt-2 md:mt-0 md:ml-auto">
+            <a href="mailto:hello@joshmurphy.ca" class="lg-nav-item">
+              <i class="fas fa-at text-xl"></i>
             </a>
-            <a href="https://github.com/ranguli/">
-              <i class="px-5 fab fa-github text-xl w-3.5"></i>
+            <a href="https://github.com/ranguli/" class="lg-nav-item">
+              <i class="fab fa-github text-xl"></i>
             </a>
           </div>
         </div>
-      </div>
-      <!-- Mobile Menu -->
-      <div class="menu md:hidden">
-        <a href="/posts/" class="block py-2 px-4 hover:bg-gray-200">posts</a>
-        
-        <!--<a href="/things/" class="block py-2 px-4 hover:bg-gray-200">projects</a>-->
-        <a href="/tags/" class="block py-2 px-4 hover:bg-gray-200">tags</a>
       </div>
     </nav>
     <main>
@@ -79,4 +53,14 @@ const url = new URL(Astro.request.url);
       </div>
     </main>
   </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </html>

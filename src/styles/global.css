@@ -4,12 +4,12 @@
 @tailwind utilities;
 
 
-.author, .published {
+.author, .date {
   @apply text-gray-500 text-sm font-sans;
 }
 
 .title {
-  @apply text-6xl text-gray-600 py-8 italic font-extrabold font-title;
+  @apply md:text-6xl text-gray-600 italic font-extrabold font-title;
 }
 
 .description {
@@ -19,6 +19,10 @@
 
 .cover-image {
   @apply w-full h-64 object-cover rounded-lg mb-4;
+}
+
+.nav-item {
+  @apply py-2 px-4 md:py-5 md:px-3 font-serif text-gray-700 hover:text-gray-900;
 }
 
 a {
