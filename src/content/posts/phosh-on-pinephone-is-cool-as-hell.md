@@ -5,7 +5,6 @@ description: ""
 author: "Joshua Murphy"
 coverImage: "/images/projects/pinephone.webp"
 tags: ["gnome", "flatpak", "pinephone", "phosh", "linux", "convergence"]
-draft: false
 ---
 
 First of all, your calendar has not been set back - I know, I know, I'm very late to the mobile Linux convergence party. But the party has been heating up before I got here and by god is it party time. Has anyone checked in on the state of Linux convergence recently? I have, and hot damn - things are actually kind of cooking.
